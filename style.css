@@ -5,16 +5,34 @@
   font-weight: normal;
   font-style: normal;
 }
-body {
+@font-face {
+  font-family: "robotoregular";
+  src: url("roboto-regular-webfont.woff2") format("woff2"),
+    url("roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotolight";
+  src: url("roboto-light-webfont.woff2") format("woff2"),
+    url("roboto-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
   font-size: 18px;
+  font-family: robotoregular;
 }
 #wrapper {
   height: 100vh;
   display: flex;
 }
 
+/* Main left side */
+
 #main-left-side {
-  width: 40vw;
+  width: 35vw;
   height: 100%;
   position: relative;
 }
@@ -55,4 +73,102 @@ body {
   text-transform: uppercase;
   color: white;
   font-family: norsebold;
+}
+
+/* Main right side */
+
+#main-right-side {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #f4f4f5;
+}
+
+.bold {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  max-width: 70ch;
+  text-align: left;
+}
+p.bold + p.bold {
+  margin-top: 30px;
+}
+#p-wrapper {
+  margin: 30px 50px;
+}
+#main-right-side form {
+  width: 100%;
+}
+#main-right-side form fieldset {
+  margin: 0;
+  border: none;
+  background-color: white;
+  padding: 50px 50px 30px 50px;
+  -webkit-box-shadow: 0px 8px 37px -6px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 8px 37px -6px rgba(66, 68, 90, 1);
+  box-shadow: 0px 8px 37px -18px rgba(66, 68, 90, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#main-right-side form fieldset > div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 35%;
+}
+#main-right-side form fieldset input {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 6px;
+}
+#main-right-side form fieldset input:focus {
+  outline: 1px solid #3b82f6;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 37px -18px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 8px 37px -18px rgba(66, 68, 90, 1);
+  box-shadow: 0px 8px 37px -18px rgba(66, 68, 90, 0.8);
+}
+#main-right-side form fieldset input:invalid {
+  border: 1px solid #ef4444;
+  outline: none;
+}
+
+#main-right-side form fieldset label {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(65, 65, 65);
+  font-size: 0.76rem;
+}
+#main-right-side form fieldset legend {
+  position: relative;
+  top: 35px;
+}
+#main-right-side button {
+  background-color: #596d48;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 30px 0 30px 50px;
+  color: #e5e7eb;
+  font-weight: 600;
+  opacity: 0.96;
+}
+#main-right-side button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+#have-account {
+  width: 100%;
+  padding-left: 50px;
+}
+#have-account a {
+  text-decoration: none;
+  color: #596d48;
+  font-weight: 600;
 }

@@ -42,7 +42,7 @@
 
         <form action="" method="get">
           <fieldset>
-            <legend>Let's do this!</legend>
+            <legend class="bold">Let's do this!</legend>
             <div id="first-name-container">
               <label for="first-name">First name</label>
               <input type="text" id="first-name" name="first-name" />
@@ -57,16 +57,30 @@
             </div>
             <div id="phone-container">
               <label for="phone">Phone number</label
-              ><input type="tel" name="phone" id="phone" />
+              ><input
+                type="tel"
+                name="phone"
+                id="phone"
+                minlength="3"
+                maxlength="20"
+              />
             </div>
             <div id="password-container">
               <label for="password">Password</label>
-              <input type="password" name="password" id="password" />
+              <input
+                type="password"
+                minlength="5"
+                maxlength="20"
+                name="password"
+                id="password"
+              />
             </div>
             <div id="confirm-password-container">
               <label for="confirm-password">Confirm password</label>
               <input
                 type="password"
+                minlength="5"
+                maxlength="20"
                 name="confirm-password"
                 id="confirm-password"
               />
@@ -74,7 +88,7 @@
           </fieldset>
           <button>Create Account</button>
         </form>
-        <p>Already have an account? <a href="#">Log in</a></p>
+        <p id="have-account">Already have an account? <a href="#">Log in</a></p>
       </div>
     </div>
   </body>
